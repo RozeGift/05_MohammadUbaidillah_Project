@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -42,6 +43,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public Animator dooranim;
+        public Animator dooranim2;
+        public Animator dooranim3;
+        public Animator dooranim4;
+        public Animator dooranim5;
+        public Animator dooranim6;
+        public Text doorInstruction; 
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +63,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            doorInstruction.enabled = false;
         }
 
 
@@ -256,5 +266,61 @@ namespace UnityStandardAssets.Characters.FirstPerson
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
 
+        private void OnTriggerStay(Collider other)
+        {
+            if(other.gameObject.tag == "Door")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim.SetBool("IsOpen", true);
+                }
+            }     
+            if(other.gameObject.tag == "Door2")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim2.SetBool("IsOpen", true);
+                }
+            }       
+            if(other.gameObject.tag == "Door3")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim3.SetBool("IsOpen", true);
+                }
+            }
+            if(other.gameObject.tag == "Door4")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim4.SetBool("IsOpen", true);
+                }
+            }
+            if(other.gameObject.tag == "Door5")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim5.SetBool("IsOpen", true);
+                }
+            }
+            if(other.gameObject.tag == "Door6")
+            {
+                doorInstruction.enabled = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dooranim6.SetBool("IsOpen", true);
+                }
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            doorInstruction.enabled = false;
+        }
     }
 }
