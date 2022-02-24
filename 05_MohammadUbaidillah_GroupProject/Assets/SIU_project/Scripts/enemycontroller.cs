@@ -11,8 +11,6 @@ public class enemycontroller : MonoBehaviour
 
     float MaxDist = 2f;
 
-    public Animator Enemyani;
-
     public int maxHealth = 30;
     public int currentHealth;
 
@@ -43,15 +41,15 @@ public class enemycontroller : MonoBehaviour
             FocusingPlayer();
         }
     }
-    /*
+    
     void FixedUpdate()
     {
-        if (FirstPersonController.PlayerDeath == false && isdead == false && PauseMenu.Gameispaused == false)
+        if (PauseMenu.Gameispaused == false)
         {
             Enemy.SetDestination(target.transform.position);
         }
     }
-    */
+    
     void FocusingPlayer()
     {
         //near player
