@@ -14,5 +14,9 @@ public class ButtonScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void MenuButton()
+    {
+        SceneManager.LoadScene("GameMenu");
+    }
 
 }

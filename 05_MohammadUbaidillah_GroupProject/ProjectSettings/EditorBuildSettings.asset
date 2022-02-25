@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SIU_project/Scene/GameScene.unity
     guid: 2645e98215280b94289a2c7dc82db4b7
+  - enabled: 1
+    path: Assets/SIU_project/Scene/GameWin.unity
+    guid: 1ea91975865ee6a4c8644270330af812
+  - enabled: 1
+    path: Assets/SIU_project/Scene/GameLose.unity
+    guid: 4d613f8c56cb72e40b11557d2ea645eb
   m_configObjects: {}
