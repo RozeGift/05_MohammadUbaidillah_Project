@@ -12,6 +12,7 @@ TagManager:
   - Door5
   - Door6
   - Enemy
+  - Goal
   layers:
   - Default
   - TransparentFX

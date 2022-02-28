@@ -25,5 +25,14 @@ public class PlayerCollision : MonoBehaviour
         {
             SceneManager.LoadScene("GameLose");
         }
+
+        if(other.gameObject.tag == "Goal")
+        {
+            if(point == 10)
+            {
+                SceneManager.LoadScene("GameWin");
+            }
+            
+        }
     }
 }
