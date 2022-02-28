@@ -11,6 +11,7 @@ TagManager:
   - Door4
   - Door5
   - Door6
+  - Enemy
   layers:
   - Default
   - TransparentFX

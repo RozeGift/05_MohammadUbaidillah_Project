@@ -9,7 +9,7 @@ public class enemycontroller : MonoBehaviour
 
     GameObject target;
 
-    float MaxDist = 2f;
+    float MaxDist = 0f;
 
     public int maxHealth = 30;
     public int currentHealth;

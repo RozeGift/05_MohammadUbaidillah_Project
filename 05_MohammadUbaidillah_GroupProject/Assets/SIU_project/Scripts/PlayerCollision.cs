@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerCollision : MonoBehaviour
 {
     public int point = 0;
@@ -18,5 +19,11 @@ public class PlayerCollision : MonoBehaviour
         ClockScore.text = "Clock: " + point;
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene("GameLose");
+        }
+    }
 }
