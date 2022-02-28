@@ -14,10 +14,6 @@ public class enemycontroller : MonoBehaviour
     public int maxHealth = 30;
     public int currentHealth;
 
-    bool isdead = false;
-
-    bool hasSpawned = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,38 +26,23 @@ public class enemycontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //health death;
-        if (currentHealth <= 0)
-        {
-            isdead = true;
-        }
-        //when near or far from player
-        if (isdead == false)
-        {
             FocusingPlayer();
-        }
+       
     }
     
     void FixedUpdate()
     {
+        /*
         if (PauseMenu.Gameispaused == false)
         {
             Enemy.SetDestination(target.transform.position);
         }
+        */
     }
     
     void FocusingPlayer()
     {
-        //near player
-        if (Vector3.Distance(transform.position, target.transform.position) <= MaxDist)
-        {
-            Enemy.isStopped = true;
-        }
-        //not near player
-        else if (Vector3.Distance(transform.position, target.transform.position) >= MaxDist)
-        {
-            Enemy.isStopped = false;
             Enemy.SetDestination(target.transform.position);
-        }
     }
+
 }
