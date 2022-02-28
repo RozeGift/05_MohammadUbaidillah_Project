@@ -45859,6 +45859,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3719395497485489768, guid: 149914faacece2940a120e1783c4c6a9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9fb22357032512a46a8f09a6c67114cf, type: 2}
     - target: {fileID: 7862698572322673259, guid: 149914faacece2940a120e1783c4c6a9,
         type: 3}
       propertyPath: m_Speed
